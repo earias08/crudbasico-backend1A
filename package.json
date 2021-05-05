@@ -1,0 +1,20 @@
+{
+  "name": "crudbasico-backend",
+  "version": "1.0.0",
+  "description": "backend del crudbasico",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js"
+  },
+  "keywords": [
+    "crud",
+    "cafeteria"
+  ],
+  "author": "Jony Plodzien, Emilse Arias",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.17.1"
+  }
+}
