@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 import './database';
+import productoRoutes from './routes/producto.routes';
 
 // cofing
 // creo una instancia de express
@@ -22,6 +23,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, '../public')));
 
 // rutas
-app.get('/', (req, res)=>{
-    res.send('esta es una ruta de prueba');
-})
+// app.get('/', (req, res)=>{
+//     res.send('esta es una ruta de prueba');
+// })
+app.use('/api/cafeteria',productoRoutes);
