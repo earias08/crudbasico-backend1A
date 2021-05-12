@@ -28,4 +28,21 @@ cafeteriaCtrl.crearProducto = async(req, res)=>{
     }
 }
 
+cafeteriaCtrl.listarProductos = async(req, res)=>{
+    try{
+        // obtener un arreglo de productos
+        const arregloProductos = await Producto.find();
+        res.status(200).json(arregloProductos);
+    }catch(error){
+        console.log(error);
+        res.status(404).json({
+            mensaje:'no se pudo enviar la lista de productos'
+        });
+    }
+}
+
+cafeteriaCtrl.eliminarProducto = async(req, res)=>{
+    console.log(req.params.id)
+}
+
 export default cafeteriaCtrl;
