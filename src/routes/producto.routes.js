@@ -9,6 +9,11 @@ router
   .get(cafeteriaCtrl.listarProductos)
   .post(cafeteriaCtrl.crearProducto);
 
-router.route('/:id').delete(cafeteriaCtrl.eliminarProducto)
+router
+  .route("/:id")
+  .delete(cafeteriaCtrl.eliminarProducto)
+  .put(cafeteriaCtrl.editarProducto)
+  .get(cafeteriaCtrl.obtenerProducto);
+
 
 export default router;
